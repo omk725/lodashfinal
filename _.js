@@ -41,7 +41,11 @@ _.inRange = function (number, begin, end) {
 
 };
 
-console.log(_.inRange(6.5,6,8));
+_.words = function (string) {
+  let newArray = string.split(' ');
+  return newArray;
+};
 
+console.log(_.words('hello how are you'));
 // Do not write or modify code below this line.
 module.exports = _;
