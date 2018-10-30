@@ -80,10 +80,17 @@ _.has = function (object, key) {
   return hasTest;
 };
 
-
-
-
-
+_.invert = function (object) {
+  object;
+  let newObject = {};
+  for (var key in object) {
+    if (object.hasOwnProperty(key)) {
+      let originalValue = object[key];
+      newObject[originalValue] = key;
+    }
+  }
+ return newObject;
+};
 
 
 // Do not write or modify code below this line.
