@@ -49,7 +49,7 @@ _.words = function (string) {
 _.pad = function (str, length) {
   str;
   length;
-  
+
 
   if (str.length === length) {
     return str;
@@ -70,10 +70,21 @@ _.pad = function (str, length) {
   return str;
 };
 
+_.has = function (object, key) {
+  object;
+  key;
+
+
+  let hasTest = object[key] ? true : false;
+
+  return hasTest;
+};
 
 
 
 
-_.pad('hi', 9);
+
+
+
 // Do not write or modify code below this line.
 module.exports = _;
