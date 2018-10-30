@@ -46,6 +46,34 @@ _.words = function (string) {
   return newArray;
 };
 
-console.log(_.words('hello how are you'));
+_.pad = function (str, length) {
+  str;
+  length;
+  
+
+  if (str.length === length) {
+    return str;
+  };
+
+  let startLength = Math.floor((length - str.length) / 2);
+  let endLength = length - str.length - startLength;
+
+
+  for (let i = 0; i < startLength; i++) {
+    str = ' ' + str;
+  }
+
+  for (let j = 0; j < endLength; j++) {
+    str = str + ' ';
+  }
+
+  return str;
+};
+
+
+
+
+
+_.pad('hi', 9);
 // Do not write or modify code below this line.
 module.exports = _;
