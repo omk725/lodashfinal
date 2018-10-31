@@ -103,20 +103,19 @@ _.findKey = function (object, predicate) {
   }
 };
 
-function testfunc(value) {
-  if (typeof value === "string") {
-    return true
-  }else {
-    return undefined;
+_.drop = function (array, dropNum) {
+  array;
+  dropNum ? dropNum : dropNum = 1;
+  let newArray = array;
+  for (var i = 0; i < dropNum; i++) {
+    newArray.shift();
   }
+  return newArray;
 };
 
-testobj = {
-  'name' : 35,
-  'age'  : 'thwenty five',
-};
+let cars = ["bmw", "merc", "audi", "lexus"];
 
-console.log(_.findKey(testobj, testfunc));
+console.log(_.drop(cars,1));
 
 // Do not write or modify code below this line.
 module.exports = _;
