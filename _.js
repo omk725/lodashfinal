@@ -92,6 +92,31 @@ _.invert = function (object) {
  return newObject;
 };
 
+_.findKey = function (object, predicate) {
+  for (let key in object) {
+    if (object.hasOwnProperty(key)) {
+      if (predicate(object[key]) === true) {
+        return key;
+        break;
+      }
+    }
+  }
+};
+
+function testfunc(value) {
+  if (typeof value === "string") {
+    return true
+  }else {
+    return undefined;
+  }
+};
+
+testobj = {
+  'name' : 35,
+  'age'  : 'thwenty five',
+};
+
+console.log(_.findKey(testobj, testfunc));
 
 // Do not write or modify code below this line.
 module.exports = _;
