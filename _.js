@@ -113,9 +113,16 @@ _.drop = function (array, dropNum) {
   return newArray;
 };
 
-let cars = ["bmw", "merc", "audi", "lexus"];
+_.dropWhile = function (array, predicate) {
 
-console.log(_.drop(cars,1));
+  let dropNumber = array.findIndex((element, index) => {
+        return !predicate(element, index);
+   });
+  let newArray = this.drop(array, dropNumber);
+  return newArray;
+};
+
+
 
 // Do not write or modify code below this line.
 module.exports = _;
