@@ -122,7 +122,20 @@ _.dropWhile = function (array, predicate) {
   return newArray;
 };
 
+_.chunk = function (array, size) {
+  array;
+  size = size ? size : 1;
+  let arrayChunks = [];
+  for (var i = 0; i < array.length; i = i + size) {
+    let arrayChunk = array.slice(i, i+size);
+    arrayChunks.push(arrayChunk);
+  }
+  return arrayChunks;
+}
 
+let cars = [1,2,3,4,5];
+
+console.log(_.chunk(cars, 3));
 
 // Do not write or modify code below this line.
 module.exports = _;
