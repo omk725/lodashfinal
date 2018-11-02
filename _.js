@@ -133,9 +133,5 @@ _.chunk = function (array, size) {
   return arrayChunks;
 }
 
-let cars = [1,2,3,4,5];
-
-console.log(_.chunk(cars, 3));
-
 // Do not write or modify code below this line.
 module.exports = _;
